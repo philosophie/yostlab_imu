@@ -140,9 +140,9 @@ void YostLabDriver::run()
   this->SerialWriteString(SET_STREAMING_SLOTS_QUATERNION_CORRECTED_GYRO_ACCELERATION_LINEAR_IN_GLOBAL);
   this->SerialWriteString(TARE_WITH_CURRENT_ORIENTATION);
   this->SerialWriteString(TARE_WITH_CURRENT_QUATERNION);
-  this->SerialWriteString(SET_STREAMING_TIMING_100_MS);
+  this->SerialWriteString(SET_STREAMING_TIMING_10_MS);
   this->SerialWriteString(START_STREAMING);
-  ros::Rate loop_rate(20);
+  ros::Rate loop_rate(100);
   int line_num_ = 0;
   sensor_msgs::Imu imu_msg_;
   std::vector<double> parsed_val_;
